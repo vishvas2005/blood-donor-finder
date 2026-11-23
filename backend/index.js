@@ -27,7 +27,7 @@ app.get('/health-check', (req , res)=>{
     console.log("health is well");
     res.status(200).send("Port is ruuning there is not any problem");
    }catch(err){
-    console.log("ohh bhai port langda hogya" , err);
+    console.log("ohh bhai server langda hogya" , err);
     res.status(503).json({status :" down" , Message:"service unavialble"});
    }
 })
