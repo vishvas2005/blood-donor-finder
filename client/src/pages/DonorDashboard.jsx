@@ -30,7 +30,6 @@ export default function DonorDashboard() {
     }
   }, []);
 
-  // Calculate 90-day eligibility dynamically if a date was provided
   const calculateEligibility = () => {
     if (!donor.lastDonationDate) {
       return {
@@ -87,37 +86,6 @@ export default function DonorDashboard() {
   return (
     <div className="min-h-screen bg-[#FBF9F6] py-6 px-4 sm:px-8 font-sans">
       <div className="max-w-[1160px] mx-auto">
-        {/* Top Floating Pill Navbar */}
-        <header className="bg-white rounded-full shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-[#F0ECE6] px-6 sm:px-8 py-3.5 flex items-center justify-between mb-10">
-          <Link
-            to="/"
-            className="text-lg font-bold tracking-tight text-[#181512]"
-          >
-            Blood<span className="text-[#D32724]">Link</span>
-          </Link>
-
-          <nav className="hidden sm:flex items-center gap-8 text-sm font-medium text-[#181512]">
-            <Link to="/" className="hover:text-[#D32724] transition">
-              Find donors
-            </Link>
-            <Link to="/my-requests" className="hover:text-[#D32724] transition">
-              My requests
-            </Link>
-            <Link
-              to="/donor-dashboard"
-              className="font-semibold text-[#181512]"
-            >
-              Dashboard
-            </Link>
-          </nav>
-
-          <button
-            onClick={handleLogout}
-            className="px-5 py-2 rounded-full bg-[#181512] hover:bg-[#2E2924] text-white text-xs font-semibold transition cursor-pointer"
-          >
-            Log out
-          </button>
-        </header>
 
         {/* Page Title */}
         <h1 className="text-3xl sm:text-4xl font-bold text-[#181512] tracking-tight mb-7">
